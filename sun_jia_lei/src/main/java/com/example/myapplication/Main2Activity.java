@@ -1,11 +1,9 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
-import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,7 +12,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -29,6 +26,12 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         String url = getIntent().getStringExtra("url");
         WebView webView = findViewById(R.id.webview);
+        findViewById(R.id.layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         webView.loadUrl("http://"+url.replace(" ","")+"/visitor/Nindex/webnew/");
 //        webView.loadUrl("https://www.baidu.com/");
         webView.addJavascriptInterface(this,"android");//添加js监听 这样html就能调用客户端
