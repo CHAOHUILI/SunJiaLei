@@ -1,1 +1,1 @@
-include ':study', ':sun_jia_lei', ':movie'
+include ':sun_jia_lei', ':movie', ':myapplication'
