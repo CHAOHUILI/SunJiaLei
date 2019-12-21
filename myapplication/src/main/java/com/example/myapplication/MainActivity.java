@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private void send() {
         if (mySocketClient != null && mySocketClient.isOpen()) {
             mySocketClient.send(et.getText().toString());
+
         }
     }
 
